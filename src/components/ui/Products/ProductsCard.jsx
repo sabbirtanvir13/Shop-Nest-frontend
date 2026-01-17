@@ -169,7 +169,7 @@ export default function ProductsCard({ item }) {
                     </div>
                 </div>
 
-                <Link href={`/products/${item.slug}`}>
+                <Link  href={`/products/${item.slug}`}>
                     <button className="w-full py-2 mt-2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium hover:opacity-90 transition">
                         View Details
                     </button>

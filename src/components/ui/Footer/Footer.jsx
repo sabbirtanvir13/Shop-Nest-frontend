@@ -4,13 +4,7 @@ import { Facebook, Twitter, Pinterest, Instagram, YouTube } from '@mui/icons-mat
 
 const Footer = () => {
   // Real placeholder images for the Instagram section
-  const instaPosts = [
-    "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&q=80", // Phone
-    "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&q=80", // Watch
-    "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&q=80", // Headphones
-    "https://png.pngtree.com/png-vector/20241210/ourmid/pngtree-smart-watch-transparent-background-image-png-image_14691060.png", // Earbuds
-    "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=400&q=80", // Camera
-  ];
+ 
 
   return (
     <footer className="w-full bg-white pt-10 pb-16">
@@ -21,20 +15,10 @@ const Footer = () => {
           align="center" 
           className="uppercase tracking-widest mb-8 font-light"
         >
-          Shop Our Insta
+        
         </Typography>
         
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-          {instaPosts.map((src, index) => (
-            <div key={index} className="aspect-square overflow-hidden group cursor-pointer">
-              <img 
-                src={src} 
-                alt={`Instagram post ${index + 1}`} 
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-            </div>
-          ))}
-        </div>
+       
       </div>
 
       <hr className="border-gray-100 mb-12" />
