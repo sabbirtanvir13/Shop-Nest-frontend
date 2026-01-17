@@ -9,7 +9,7 @@ export default function Navbar() {
         
         {/* Left: Logo */}
         <Link href="/" className="text-xl font-bold text-blue-600">
-          MyApp
+      ShopNest
         </Link>
 
         {/* Center: Navigation */}
@@ -17,14 +17,17 @@ export default function Navbar() {
           <Link href="/" className="hover:text-blue-600 font-medium">
             Home
           </Link>
-          <Link href="/items" className="hover:text-blue-600 font-medium">
-            Items
+          <Link href="/products" className="hover:text-blue-600 font-medium">
+           Product
           </Link>
           <Link href="/about" className="hover:text-blue-600 font-medium">
             About
           </Link>
           <Link href="/contact" className="hover:text-blue-600 font-medium">
             Contact
+          </Link>
+          <Link href="/Add_Products" className="hover:text-blue-600 font-medium">
+            Add Products
           </Link>
         </div>
 
