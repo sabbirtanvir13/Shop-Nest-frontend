@@ -18,15 +18,15 @@ npm or yarn
 MongoDB (local or Atlas)
 
 🔹 Frontend Setup (Next.js)
-git clone https://github.com/your-username/shopnest.git
+https://github.com/sabbirtanvir13/Shop-Nest-frontend.git
 cd shopnest
 npm install
 
 
 Create a .env.local file in the root directory:
 
-NEXTAUTH_URL=http://localhost:3000
-NEXTAUTH_SECRET=your_secret_key
+NEXT_AUTH_URL=http://localhost:3000
+
 
 
 Run the frontend:
@@ -46,7 +46,7 @@ npm install
 Create a .env file:
 
 PORT=5000
-MONGODB_URI=your_mongodb_connection_string
+MONGODB_URI = mongodb+srv://ShopNest_db:oX0eK1fLiBQRBd5l@cluster0.tx061fa.mongodb.net/?appName=Cluster0;
 
 
 Run the backend server:
