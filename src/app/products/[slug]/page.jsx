@@ -1,70 +1,4 @@
-// // "use client";
 
-// // import { useEffect, useState } from "react";
-// // import { useParams } from "next/navigation";
-// // import Image from "next/image";
-
-// // const ProductDetailsPage = () => {
-// //   const { slug } = useParams(); // useParams থেকে slug নাও
-
-// //   const [product, setProduct] = useState(null);
-// //   const [loading, setLoading] = useState(true);
-
-// //   useEffect(() => {
-// //     if (!slug) return;
-
-// //     fetch(`http://localhost:5000/items/${slug}`)
-// //       .then(res => {
-// //         if (!res.ok) throw new Error("Product not found");
-// //         return res.json();
-// //       })
-// //       .then(data => {
-// //         setProduct(data);
-// //         setLoading(false);
-// //       })
-// //       .catch(err => {
-// //         console.error(err);
-// //         setProduct(null);
-// //         setLoading(false);
-// //       });
-// //   }, [slug]);
-
-// //   if (loading)
-// //     return <p className="text-center mt-20 text-gray-500">Loading product...</p>;
-// //   if (!product)
-// //     return <p className="text-center mt-20 text-red-500">Product not found!</p>;
-
-// //   return (
-// //     <div className="max-w-6xl mx-auto p-8 flex flex-col md:flex-row gap-10">
-// //       {/* Image */}
-// //       <div className="relative w-full md:w-1/2 h-96 md:h-[500px] rounded-3xl overflow-hidden shadow-lg">
-// //         <Image
-// //           src={product.image}
-// //           alt={product.name}
-// //           fill
-// //           className="object-cover"
-// //         />
-// //       </div>
-
-// //       {/* Product Info */}
-// //       <div className="flex-1 flex flex-col justify-between">
-// //         <div>
-// //           <h1 className="text-3xl font-bold mb-4">{product.name}</h1>
-// //           <p className="text-gray-600 mb-6">{product.description}</p>
-// //           <p className="text-2xl font-semibold mb-6 text-blue-600">
-// //             ৳ {product.price}
-// //           </p>
-// //         </div>
-
-// //         <button className="py-3 px-6 w-full md:w-auto bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:opacity-90 transition">
-// //           Buy Now
-// //         </button>
-// //       </div>
-// //     </div>
-// //   );
-// // };
-
-// // export default ProductDetailsPage;
 
 "use client";
 
@@ -73,7 +7,7 @@ import { useParams } from "next/navigation";
 import Image from "next/image";
 
 const ProductDetailsPage = () => {
-  const { slug } = useParams(); // URL থেকে slug নেওয়া হচ্ছে
+  const { slug } = useParams(); 
 
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -83,7 +17,7 @@ const ProductDetailsPage = () => {
 
     const fetchProduct = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/items/${slug}`);
+        const res = await fetch(`${process.env.NEXT_AUTH_URL}/items/${slug}`);
         if (!res.ok) throw new Error("Product not found");
 
         const data = await res.json();
