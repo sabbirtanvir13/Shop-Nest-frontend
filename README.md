@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+ShopNest – Full Stack E-Commerce Application
+📌 Project Description
 
-## Getting Started
+ShopNest is a full-stack e-commerce web application built with Next.js (App Router) for the frontend and Node.js, Express, and MongoDB for the backend.
+The platform allows users to browse products, view product details, register/login securely using NextAuth, and enables admins to add new products to the store.
 
-First, run the development server:
+The project is designed with a modern UI, clean architecture, and scalable structure suitable for real-world applications.
 
-```bash
+⚙️ Setup Instructions
+🔹 Prerequisites
+
+Make sure you have installed:
+
+Node.js (v18+ recommended)
+
+npm or yarn
+
+MongoDB (local or Atlas)
+
+🔹 Frontend Setup (Next.js)
+git clone https://github.com/your-username/shopnest.git
+cd shopnest
+npm install
+
+
+Create a .env.local file in the root directory:
+
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your_secret_key
+
+
+Run the frontend:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Frontend will run on:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+http://localhost:3000
 
-## Learn More
+🔹 Backend Setup (Express)
+cd server
+npm install
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Create a .env file:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Run the backend server:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+nodemon index.js
+
+
+Backend will run on:
+
+http://localhost:5000
+
+ Routes List
+🔸 Frontend Routes
+Route	Description
+/	Home / Landing Page
+/products	All Products
+/products/[slug]	Product Details
+/login	Login Page
+/register	Register Page
+/add-products	Add New Product (Admin)
+🔸 Backend API Routes
+Method	Endpoint	Description
+GET	/items	Get all products
+GET	/items/:slug	Get product by slug
+POST	/items	Add new product
