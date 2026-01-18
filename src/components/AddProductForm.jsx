@@ -13,8 +13,8 @@ export default function AddProductForm() {
     setMessage("");
 
     try {
-      // const res = await fetch("http://localhost:5000/items", {
-    const res = await fetch(`${process.env.NEXT_AUTH_URL}/items`, {
+ 
+    const res = await fetch(`https://shop-nest-server-pied.vercel.app/items`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

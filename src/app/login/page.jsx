@@ -110,7 +110,7 @@ export default function LoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 px-4">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8">
         <h1 className="text-3xl font-bold text-gray-800 text-center mb-4">
-          Welcome Back 👋
+          Welcome Back 
         </h1>
 
         <p className="text-sm text-gray-500 text-center mb-6">

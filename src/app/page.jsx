@@ -28,10 +28,11 @@
 import Banner from "@/pages/Banner";
 import Features from "@/pages/Features";
 import Latestproducts from "@/components/LatesProducts/Latestproducts";
-import Blog from "@/pages/Blog";
+
 import PromoBanner from "@/pages/PromoBanner";
 import ReviewsSection from "@/pages/ReviewsSection";
 import SubscribeSection from "@/pages/SubscribeSection";
+import Blog from "@/pages/Blog";
 
 export default function Home() {
   return (

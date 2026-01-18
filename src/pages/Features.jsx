@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+
 import { Typography } from '@mui/material';
 import { LocalShippingOutlined, VerifiedOutlined, SellOutlined, SecurityOutlined } from '@mui/icons-material';
 

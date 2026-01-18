@@ -10,7 +10,7 @@ const Latestproducts = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_AUTH_URL}/latest-products`)
+    fetch(`https://shop-nest-server-pied.vercel.app/latest-products`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

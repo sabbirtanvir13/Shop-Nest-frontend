@@ -17,7 +17,7 @@ const ProductDetailsPage = () => {
 
     const fetchProduct = async () => {
       try {
-        const res = await fetch(`${process.env.NEXT_AUTH_URL}/items/${slug}`);
+        const res = await fetch(`https://shop-nest-server-pied.vercel.app/items/${slug}`);
         if (!res.ok) throw new Error("Product not found");
 
         const data = await res.json();
