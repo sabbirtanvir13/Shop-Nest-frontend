@@ -1,6 +1,6 @@
 import Image from "next/image";
 import banner from "../../public/banner.png";
-import Container from "@/components/ui/Container";
+
 
 export default function Banner() {
   return (

@@ -141,7 +141,7 @@ const blogPosts = [
   }
 ];
 
-export const Blog = () => {
+  const Blog = () => {
   return (
     <section className="bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4">
@@ -192,3 +192,4 @@ export const Blog = () => {
   );
 };
 
+export default Blog

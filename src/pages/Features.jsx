@@ -3,7 +3,7 @@ import React from 'react';
 import { Typography } from '@mui/material';
 import { LocalShippingOutlined, VerifiedOutlined, SellOutlined, SecurityOutlined } from '@mui/icons-material';
 
-export const Features = () => {
+const Features = () => {
   const items = [
     { icon: <LocalShippingOutlined className="text-gray-400" />, title: 'Free Delivery', desc: 'Consectetur adipi elit lorem ipsum dolor sit amet.' },
     { icon: <VerifiedOutlined className="text-gray-400" />, title: 'Quality Guarantee', desc: 'Dolor sit amet lorem ipsum consectetur adipi.' },
@@ -31,3 +31,4 @@ export const Features = () => {
     </section>
   );
 };
+export default Features
